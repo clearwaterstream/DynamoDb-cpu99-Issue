@@ -1,0 +1,621 @@
+Log Entry : 
+2019-07-23 4:22:36 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:36 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:37 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:37 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:37 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:37 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:37 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:37 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:38 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:38 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:38 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:38 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:39 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:39 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:39 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:39 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:39 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+-------------------------------
+Log Entry : 
+2019-07-23 4:22:39 PM
+  :
+  :System.Net.Http.HttpRequestException: A socket operation was attempted to an unreachable network ---> System.Net.Sockets.SocketException: A socket operation was attempted to an unreachable network
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(Task`1 getTask)
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.<>c__DisplayClass1_1`1.<<RunSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 142
+   at Amazon.Runtime.Internal.Util.AsyncHelpers.RunSync[T](Func`1 task) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Internal\Util\_mobile\AsyncHelpers.cs:line 87
+   at Amazon.Util.AWSSDKUtils.DownloadStringContent(Uri uri, TimeSpan timeout, IWebProxy proxy) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\AWSSDKUtils.cs:line 1013
+   at Amazon.Util.EC2InstanceMetadata.GetItems(String relativeOrAbsolutePath, Int32 tries, Boolean slurp) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 513
+   at Amazon.Util.EC2InstanceMetadata.get_IAMSecurityCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Util\_bcl+netstandard\EC2InstanceMetadata.cs:line 311
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.FetchCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 142
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentials() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 88
+   at Amazon.Runtime.DefaultInstanceProfileAWSCredentials.GetCredentialsAsync() in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Credentials\_bcl+netstandard\DefaultInstanceProfileAWSCredentials.cs:line 106
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 90
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in D:\JenkinsWorkspaces\trebuchet-stage-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at AWS.Logger.Core.AWSLoggerCore.LogEventTransmissionSetup(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 429
+   at AWS.Logger.Core.AWSLoggerCore.Monitor(CancellationToken token) in C:\codebuild\tmp\output\src083235519\src\src\AWS.Logger.Core\Core\AWSLoggerCore.cs:line 322
+-------------------------------
