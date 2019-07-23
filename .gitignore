@@ -12,6 +12,8 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+aws-logger-errors.txt
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
