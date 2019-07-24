@@ -79,17 +79,17 @@ namespace DynamoDBCPU99.Application.Persistence
                     [":v_code"] = new Primitive(randZip)
                 };
 
-                var pageSize = 15;
+                var pageSize = 25;
 
                 var query = zipCodeTable.Query(new QueryOperationConfig()
                 {
                     IndexName = "Code-index",
                     KeyExpression = keyExpr,
                     PaginationToken = "{}",
-                    Limit = pageSize
+                    Limit = 5 // let's limit this to cause more GetNextSetAsync calls, this is artificial ...
                 });
 
-                var bucket = new List<ZipCode>(pageSize); // 15 is our bucket or page size. After we fill it, we are good...
+                var bucket = new List<ZipCode>(pageSize); // 25 is our bucket or page size. After we fill it, we are good...
 
                 var i = 0;
                 do
@@ -102,12 +102,12 @@ namespace DynamoDBCPU99.Application.Persistence
 
                     bucket.AddRange(zipCodes);
 
-                    if (query.PaginationToken == "{}")
+                    if (query.PaginationToken == "{}" || query.IsDone)
                     {
                         break; // BREAK!!! there are no more records
                     }
 
-                } while (!query.IsDone || bucket.Count >= pageSize);
+                } while (bucket.Count < pageSize);
 
                 return bucket;
             }
