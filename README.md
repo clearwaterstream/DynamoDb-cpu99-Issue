@@ -10,4 +10,4 @@ An example code that shows how GetNextSetAsync() can overwhelm a box running IIS
 
 To seed sample data into `ZipCode` table, run `\home\seed` GET method  
 
-To execute concurrenct search operations, do `ab.exe -n 1000 -c 15 http://localhost:50871/home/search`. Apache for Windows can be downloaded [here](https://www.apachelounge.com/download/)
+To execute concurrenct search operations, do `ab.exe -n 1000 -c 15 http://localhost:port_num/home/search`. Apache for Windows can be downloaded [here.](https://www.apachelounge.com/download/)
