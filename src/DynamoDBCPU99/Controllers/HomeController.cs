@@ -31,15 +31,15 @@ namespace DynamoDBCPU99.Controllers
 
         public async Task<IActionResult> Search()
         {
-            var dataStore = ServiceRegistrar.Current.GetInstance<ZipCodeDataStore>();
+            var dataStore = ServiceRegistrar.Current.GetInstance<IZipCodeLookup>();
 
             var sw = Stopwatch.StartNew();
 
-            await dataStore.Lookup();
+            var items = await dataStore.Search();
 
             sw.Stop();
 
-            return Content($"search done. operation took {sw.ElapsedMilliseconds} ms");
+            return Content($"search done. operation took {sw.ElapsedMilliseconds} ms. {items.Count} items returned.");
         }
     }
 }

@@ -8,6 +8,5 @@ namespace DynamoDBCPU99.Application.Features
     public interface ZipCodeDataStore
     {
         Task Seed();
-        Task Lookup();
     }
 }

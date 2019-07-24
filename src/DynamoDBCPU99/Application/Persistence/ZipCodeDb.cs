@@ -1,5 +1,7 @@
 ﻿using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2.DocumentModel;
+using Amazon.DynamoDBv2.Model;
 using clearwaterstream.AWS.Db;
 using clearwaterstream.Security;
 using clearwaterstream.Util;
@@ -12,9 +14,11 @@ using System.Threading.Tasks;
 
 namespace DynamoDBCPU99.Application.Persistence
 {
-    public class ZipCodeDb : ZipCodeDataStore, IDisposable
+    public class ZipCodeDb : ZipCodeDataStore, IZipCodeLookup, IDisposable
     {
         static AmazonDynamoDBClient dbClient;
+
+        readonly Random rand = new Random();
 
         static readonly Lazy<AmazonDynamoDBClient> dbClientFactory = new Lazy<AmazonDynamoDBClient>(() =>
         {
@@ -25,8 +29,6 @@ namespace DynamoDBCPU99.Application.Persistence
 
         public async Task Seed()
         {
-            var rand = new Random();
-
             var batch = new List<ZipCode>();
 
             var numRecords = 500;
@@ -40,7 +42,7 @@ namespace DynamoDBCPU99.Application.Persistence
                         Id = IdGenerator.NewId(),
                         City = RandomUtil.GetRandomString(),
                         State = RandomUtil.GetRandomString(),
-                        Code = rand.Next(99999).ToString("D5"),
+                        Code = rand.Next(10).ToString("D5"), // we'll need them to repeat
                         Latitude = rand.NextDouble() * 90,
                         Longitude = rand.NextDouble() * 180
                     };
@@ -62,9 +64,53 @@ namespace DynamoDBCPU99.Application.Persistence
             await batchWrite.ExecuteAsync();
         }
 
-        public async Task Lookup()
+        public async Task<ICollection<ZipCode>> Search()
         {
-            throw new NotImplementedException();
+            using (var dynamoDbContext = new DynamoDBContext(dbClientFactory.Value, new DynamoDBContextConfig { Conversion = DynamoDBEntryConversion.V2 }))
+            {
+                var zipCodeTable = dynamoDbContext.GetTargetTable<ZipCode>();
+
+                var randZip = rand.Next(10).ToString("D5");
+
+                var keyExpr = new Expression();
+                keyExpr.ExpressionStatement = "Code = :v_code";
+                keyExpr.ExpressionAttributeValues = new Dictionary<string, DynamoDBEntry>
+                {
+                    [":v_code"] = new Primitive(randZip)
+                };
+
+                var pageSize = 15;
+
+                var query = zipCodeTable.Query(new QueryOperationConfig()
+                {
+                    IndexName = "Code-index",
+                    KeyExpression = keyExpr,
+                    PaginationToken = "{}",
+                    Limit = pageSize
+                });
+
+                var bucket = new List<ZipCode>(pageSize); // 15 is our bucket or page size. After we fill it, we are good...
+
+                var i = 0;
+                do
+                {
+                    i++;
+
+                    var docs = await query.GetNextSetAsync();
+
+                    IEnumerable<ZipCode> zipCodes = dynamoDbContext.FromDocuments<ZipCode>(docs);
+
+                    bucket.AddRange(zipCodes);
+
+                    if (query.PaginationToken == "{}")
+                    {
+                        break; // BREAK!!! there are no more records
+                    }
+
+                } while (!query.IsDone || bucket.Count >= pageSize);
+
+                return bucket;
+            }
         }
 
         public void Dispose()
