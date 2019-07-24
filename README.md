@@ -1,5 +1,7 @@
 # DynamoDb-cpu99-Issue
 
+### Update -- the issue can no longer be reproduced when using AWSSDK.DynamoDBv2 v3.3.104.8
+
 An example code that shows how GetNextSetAsync() can overwhelm a box running IIS / ASP.NET Core
 
 * The app is configured to run in `us-east-1`. If you need to chang the region, see [appsettings.json](https://github.com/clearwaterstream/DynamoDb-cpu99-Issue/blob/master/src/DynamoDBCPU99/appsettings.json) and [NLog.config](https://github.com/clearwaterstream/DynamoDb-cpu99-Issue/blob/master/src/DynamoDBCPU99/NLog.config). If running on EC2, the region is inferred from instance metadata.
