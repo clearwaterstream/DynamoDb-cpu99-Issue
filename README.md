@@ -1,6 +1,6 @@
 # DynamoDb-cpu99-Issue
 
-### Update -- the issue can no longer be reproduced when using AWSSDK.DynamoDBv2 v3.3.104.8
+#### Update -- the issue can no longer be reproduced when using AWSSDK.DynamoDBv2 v3.3.104.8
 
 An example code that shows how GetNextSetAsync() can overwhelm a box running IIS / ASP.NET Core
 
